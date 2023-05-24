@@ -3,6 +3,7 @@ package medium;
 import support.Kiligz;
 import support.TreeNode;
 import type.DataStructure;
+import type.DivideAndConquer;
 import type.Recursive;
 
 import java.util.HashMap;
@@ -16,7 +17,7 @@ import java.util.Map;
  * @author Ivan
  * @since 2023/5/19
  */
-public class N0105 implements DataStructure.BinaryTree, Recursive {
+public class N0105 implements DataStructure.BinaryTree, Recursive, DivideAndConquer {
     public static void main(String[] args) {
         int[] preorder = Kiligz.toIntArray("3,9,20,15,7");
         int[] inorder = Kiligz.toIntArray("9,3,15,20,7");
@@ -28,24 +29,24 @@ public class N0105 implements DataStructure.BinaryTree, Recursive {
     int[] preorder;
 
     public TreeNode buildTree(int[] preorder, int[] inorder) {
-        this.preorder = preorder;
-        int i = 0;
-        for (int num : inorder) {
-            map.put(num, i++);
+        int n = inorder.length;
+        for (int i = 0; i < n; i++) {
+            map.put(inorder[i], i);
         }
-        return buildTree(0, i, 0);
+        this.preorder = preorder;
+        return buildTree(0, n - 1, 0);
     }
 
     public TreeNode buildTree(int pStart, int pEnd, int iStart) {
-        if (pStart == pEnd) return null;
+        if (pStart > pEnd) return null;
 
         int rootVal = preorder[pStart];
         int iRootIdx = map.get(rootVal);
         int leftNum = iRootIdx - iStart;
 
         TreeNode root = new TreeNode(rootVal);
-        root.left = buildTree(pStart + 1, pStart + 1 + leftNum, iStart);
-        root.right = buildTree(pStart + 1 + leftNum, pEnd, iRootIdx + 1);
+        root.left = buildTree(pStart + 1, pStart + leftNum, iStart);
+        root.right = buildTree(pStart + leftNum + 1, pEnd, iRootIdx + 1);
         return root;
     }
 }

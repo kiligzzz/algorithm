@@ -3,6 +3,7 @@ package medium;
 import support.Kiligz;
 import support.TreeNode;
 import type.DataStructure;
+import type.DivideAndConquer;
 import type.Recursive;
 
 /**
@@ -15,7 +16,7 @@ import type.Recursive;
  * @author Ivan
  * @since 2023/4/10
  */
-public class Offer07 implements DataStructure.BinaryTree, Recursive {
+public class Offer07 implements DataStructure.BinaryTree, Recursive, DivideAndConquer {
     public static void main(String[] args) {
         int[] preorder = Kiligz.toIntArray("3,9,20,15,7");
         int[] inorder = Kiligz.toIntArray("9,3,15,20,7");

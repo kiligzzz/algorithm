@@ -8,17 +8,18 @@ package type;
  */
 public interface DynamicProgramming {
     /**
-     * 贪心算法，最简单的动态规划
+     * 贪心
+     * 最简单的动态规划
      */
     interface Greed {
     }
 
     /**
-     * Kadane算法
+     * Kadane
+     * 基于动态规划，主要用于解决最大子数组和问题
      */
     interface Kadane extends DynamicProgramming {
         /**
-         * 基于动态规划，主要用于解决最大子数组和问题
          * 以下为默认格式
          */
         default int maxSubArray(int[] nums) {

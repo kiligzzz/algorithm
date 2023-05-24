@@ -1,7 +1,7 @@
 package type;
 
 /**
- * 常见方法
+ * 常见题
  *
  * @author Ivan
  * @date 2023/2/28 15:27

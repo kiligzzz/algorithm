@@ -36,7 +36,7 @@ public class ExtractExecution {
                         file -> {
                             try {
                                 List<String> lines = Files.readAllLines(Paths.get(file.getAbsolutePath()));
-                                return lines.get(lines.indexOf("/**") + 1).substring(2);
+                                return lines.get(lines.indexOf("/**") + 1).substring(3);
                             } catch (Exception ignore) {
                             }
                             return "";
@@ -54,8 +54,8 @@ public class ExtractExecution {
                             .map(Class::getName)
                             .map(typeName -> typeName.replace("type.", ""))
                             .collect(Collectors.joining(", ", "[", "]"))
-                            .replace("$", "");
-                    return question + " -> " + questionToCommentMap.get(question) + " -> " + types;
+                            .replace("$", ".");
+                    return question + " (" + questionToCommentMap.get(question) + ") -> " + types;
                 })
                 .sorted()
                 .collect(Collectors.toList());

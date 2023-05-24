@@ -6,6 +6,7 @@ import java.util.LinkedList;
 
 /**
  * 深度优先
+ * 主要用于搜索和遍历
  *
  * @author Ivan
  * @date 2023/5/17 16:33

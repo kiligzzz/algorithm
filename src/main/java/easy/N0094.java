@@ -2,7 +2,9 @@ package easy;
 
 import support.Kiligz;
 import support.TreeNode;
+import type.DFS;
 import type.DataStructure;
+import type.Recursive;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +17,7 @@ import java.util.List;
  * @author Ivan
  * @since 2023/5/15
  */
-public class N0094 implements DataStructure.BinaryTree {
+public class N0094 implements DataStructure.BinaryTree, Recursive, DFS {
     public static void main(String[] args) {
         TreeNode root = Kiligz.toTreeNode("1,null,2,3");
         Kiligz.print(new N0094().inorderTraversal(root));
