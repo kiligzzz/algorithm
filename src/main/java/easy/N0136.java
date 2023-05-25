@@ -1,6 +1,7 @@
 package easy;
 
 import support.Kiligz;
+import type.Common;
 
 /**
  * 只出现一次的数字
@@ -11,7 +12,7 @@ import support.Kiligz;
  * @author Ivan
  * @since 2023/5/25
  */
-public class N0136 {
+public class N0136 implements Common.Number {
     public static void main(String[] args) {
         int[] arr = Kiligz.toIntArray("4,1,2,1,2");
         Kiligz.print(new N0136().singleNumber(arr));
