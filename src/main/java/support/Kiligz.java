@@ -77,6 +77,13 @@ public class Kiligz {
         return strArr;
     }
 
+    /**
+     * n个str -> List
+     */
+    public static List<String> toList(String... strArr) {
+        return Arrays.asList(strArr);
+    }
+
 
     /**
      * n个str -> ListNode

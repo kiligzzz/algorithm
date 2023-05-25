@@ -34,6 +34,7 @@ public interface TwoPointer {
 
     /**
      * 快速查找匹配
+     * 应用关键：字符串查找
      */
     interface KMP {
         /**
