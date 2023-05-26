@@ -15,7 +15,7 @@ public class N0002 implements DataStructure.Linked {
     public static void main(String[] args) {
         ListNode l1 = Kiligz.toListNode("2,4,3");
         ListNode l2 = Kiligz.toListNode("5,6,4");
-        System.out.println(new N0002().addTwoNumbers(l1, l2));
+        Kiligz.print(new N0002().addTwoNumbers(l1, l2));
     }
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {

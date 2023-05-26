@@ -21,6 +21,33 @@ public class Kiligz {
         System.out.println(Arrays.deepToString(arr));
     }
 
+    public static void print(ListNode head) {
+        // 环形入口
+        ListNode circleAccess = BasicUtil.getCircleAccess(head);
+
+        List<ListNode> nodeList = new ArrayList<>();
+        ListNode cur = head;
+        boolean hasCircle = false;
+        while (cur != null) {
+            if (cur == circleAccess) {
+                if (hasCircle) break;
+
+                hasCircle = true;
+            }
+            nodeList.add(cur);
+            cur = cur.next;
+        }
+
+        System.out.println(
+                nodeList.stream()
+                        .map(node -> node.val + "")
+                        .collect(Collectors.joining(" -> "))
+        );
+
+        if (hasCircle)
+            System.out.println("circleAccessIdx: " + nodeList.indexOf(circleAccess));
+    }
+
     public static void print(TreeNode tree) {
         TreeUtil.show(tree);
     }
@@ -84,16 +111,28 @@ public class Kiligz {
         return Arrays.asList(strArr);
     }
 
-
     /**
-     * n个str -> ListNode
+     * n个str -> ListNode，传入环形入口可构建环形链表
      */
     public static ListNode toListNode(String str) {
+        return toListNode(str, -1);
+    }
+
+    /**
+     * n个str -> ListNode，传入环形入口下标可构建环形链表
+     */
+    public static ListNode toListNode(String str, int circleAccessIdx) {
         ListNode head = new ListNode();
+        ListNode access = null;
+
         ListNode cur = head;
-        for (String val : str.split(",")) {
-            cur = cur.next = new ListNode(Integer.parseInt(val));
+        String[] arr = str.split(",");
+        for (int i = 0; i < arr.length; i++) {
+            cur = cur.next = new ListNode(Integer.parseInt(arr[i]));
+            if (i == circleAccessIdx)
+                access = cur;
         }
+        cur.next = access;
         return head.next;
     }
 
