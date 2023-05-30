@@ -2,6 +2,7 @@ package medium;
 
 import support.Kiligz;
 import type.DFS;
+import type.Recursive;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -16,7 +17,7 @@ import java.util.Map;
  * @author Ivan
  * @since 2023/4/10
  */
-public class N0017 implements DFS.Backtrack {
+public class N0017 implements DFS.Backtrack, Recursive {
     public static void main(String[] args) {
         Kiligz.print(new N0017().letterCombinations("23"));
     }

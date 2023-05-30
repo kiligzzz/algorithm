@@ -3,6 +3,7 @@ package medium;
 import support.Kiligz;
 import type.CSF;
 import type.DFS;
+import type.Recursive;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,7 +19,7 @@ import java.util.List;
  * @author Ivan
  * @since 2023/4/24
  */
-public class N0040 implements CSF.Combination, DFS.Backtrack {
+public class N0040 implements CSF.Combination, DFS.Backtrack, Recursive {
 
     public static void main(String[] args) {
         int[] arr = Kiligz.toIntArray("2,5,2,1,2");
