@@ -10,7 +10,7 @@ import java.util.Queue;
  * 主要用于搜索和遍历
  *
  * @author Ivan
- * @date 2023/5/17 18:51
+ * @since 2023/5/17
  */
 public interface BFS {
     /**

@@ -7,7 +7,7 @@ package type;
  * 2.重叠子问题 -> 如斐波那契数列，即从第三项开始，每一项都等于前两项之和
  *
  * @author Ivan
- * @date 2023/2/27 16:45
+ * @since 2023/2/27
  */
 public interface DynamicProgramming {
     /**

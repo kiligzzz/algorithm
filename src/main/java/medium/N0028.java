@@ -1,8 +1,8 @@
 package medium;
 
 import support.Kiligz;
+import type.Common;
 import type.TwoPointer;
-import type.Violent;
 
 /**
  * 找出字符串中第一个匹配项的下标
@@ -12,7 +12,7 @@ import type.Violent;
  * @author Ivan
  * @since 2023/4/17
  */
-public class N0028 implements Violent, TwoPointer.KMP {
+public class N0028 implements Common.Violent, TwoPointer.KMP {
     public static void main(String[] args) {
         Kiligz.print(new N0028().strStr2("sadbutsad", "dbu"));
     }

@@ -4,16 +4,10 @@ package type;
  * 双指针
  *
  * @author Ivan
- * @date 2023/2/28 16:34
+ * @since 2023/2/28
  */
 @SuppressWarnings("all")
 public interface TwoPointer {
-    /**
-     * 二分
-     */
-    interface Binary extends TwoPointer {
-    }
-
     /**
      * 滑动窗口
      */

@@ -7,7 +7,7 @@ package type;
  * 有限状态自动机可以表示为一个有向图
  *
  * @author Ivan
- * @date 2023/5/25 15:39
+ * @since 2023/5/25
  */
 public interface FSM {
 }

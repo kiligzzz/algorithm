@@ -1,6 +1,7 @@
 package medium;
 
 import support.Kiligz;
+import type.Binary;
 import type.DataStructure;
 import type.TwoPointer;
 
@@ -12,7 +13,7 @@ import type.TwoPointer;
  * @author Ivan
  * @since 2023/4/19
  */
-public class N0033 implements DataStructure.Arrayed, TwoPointer.Binary {
+public class N0033 implements DataStructure.Arrayed, TwoPointer, Binary {
     public static void main(String[] args) {
         int[] arr = Kiligz.toIntArray("3,1");
         Kiligz.print(new N0033().search(arr, 0));

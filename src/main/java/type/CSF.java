@@ -4,7 +4,7 @@ package type;
  * 组合（combination）、子集（subset）、全排列（fullPermutation）
  *
  * @author Ivan
- * @date 2023/4/24 18:29
+ * @since 2023/4/24
  */
 public interface CSF {
     /**

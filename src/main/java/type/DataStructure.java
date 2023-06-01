@@ -4,7 +4,7 @@ package type;
  * 数据结构
  *
  * @author Ivan
- * @date 2023/2/28 10:15
+ * @since 2023/2/28
  */
 public interface DataStructure {
     /**

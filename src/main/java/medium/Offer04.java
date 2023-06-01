@@ -1,6 +1,7 @@
 package medium;
 
 import support.Kiligz;
+import type.Binary;
 import type.TwoPointer;
 
 /**
@@ -9,7 +10,7 @@ import type.TwoPointer;
  * @author Ivan
  * @since 2023/4/3
  */
-public class Offer04 implements TwoPointer.Binary {
+public class Offer04 implements TwoPointer, Binary {
     public static void main(String[] args) {
         int[][] matrix = Kiligz.to2DIntArray(
                 "1,4,7,11,15",

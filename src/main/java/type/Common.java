@@ -4,7 +4,7 @@ package type;
  * 常见题
  *
  * @author Ivan
- * @date 2023/2/28 15:27
+ * @since 2023/2/28
  */
 public interface Common {
     /**
@@ -24,5 +24,11 @@ public interface Common {
      * hash有关
      */
     interface Hash extends Common {
+    }
+
+    /**
+     * 暴力
+     */
+    interface Violent extends Common {
     }
 }

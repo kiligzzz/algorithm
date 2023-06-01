@@ -7,7 +7,7 @@ package type;
  * 2.各个子问题相互独立，且子问题的解可以合并为该问题的解
  *
  * @author Ivan
- * @date 2023/5/24 12:00
+ * @since 2023/5/24
  */
 public interface DivideAndConquer {
 }
