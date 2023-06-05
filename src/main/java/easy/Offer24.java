@@ -3,6 +3,7 @@ package easy;
 import support.Kiligz;
 import support.ListNode;
 import type.DataStructure;
+import type.TwoPointer;
 
 /**
  * 反转链表
@@ -12,7 +13,7 @@ import type.DataStructure;
  * @author Ivan
  * @since 2023/6/5
  */
-public class Offer24 implements DataStructure.Linked {
+public class Offer24 implements DataStructure.Linked, TwoPointer {
     public static void main(String[] args) {
         ListNode head = Kiligz.toListNode("1,2,3,4,5");
         Kiligz.print(new Offer24().reverseList(head));
