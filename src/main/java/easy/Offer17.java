@@ -1,6 +1,7 @@
 package easy;
 
 import support.Kiligz;
+import type.Common;
 
 /**
  * 打印从1到最大的n位数
@@ -10,7 +11,7 @@ import support.Kiligz;
  * @author Ivan
  * @since 2023/6/1
  */
-public class Offer17 {
+public class Offer17 implements Common.Number {
     public static void main(String[] args) {
         Kiligz.print(new Offer17().printNumbers(3));
     }

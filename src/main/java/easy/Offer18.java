@@ -2,6 +2,7 @@ package easy;
 
 import support.Kiligz;
 import support.ListNode;
+import type.DataStructure;
 
 /**
  * 删除链表的节点
@@ -11,7 +12,7 @@ import support.ListNode;
  * @author Ivan
  * @since 2023/6/1
  */
-public class Offer18 {
+public class Offer18 implements DataStructure.Linked {
     public static void main(String[] args) {
         ListNode head = Kiligz.toListNode("4,5,1,9");
         Kiligz.print(new Offer18().deleteNode(head, 5));
