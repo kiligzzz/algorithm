@@ -6,7 +6,10 @@ package support;
 public class TreeUtil {
 
     public static void show(TreeNode root) {
-        if (root == null) System.out.println("EMPTY!");
+        if (root == null) {
+            System.out.println("EMPTY!");
+            return;
+        };
         // 得到树的深度
         int treeDepth = getTreeDepth(root);
 
