@@ -16,7 +16,7 @@ import java.util.Comparator;
  */
 public class N0056 implements DataStructure.Arrayed {
     public static void main(String[] args) {
-        int[][] arr = Kiligz.to2DIntArray("1,3",
+        int[][] arr = Kiligz.toMatrixIntArray("1,3",
                 "2,6",
                 "8,10",
                 "15,18");

@@ -14,9 +14,9 @@ import type.Recursive;
  * @author Ivan
  * @since 2023/5/30
  */
-public class Offer12 implements DataStructure.Arrayed, DFS.Backtrack, Recursive {
+public class Offer12 implements DataStructure.Matrix, DFS.Backtrack, Recursive {
     public static void main(String[] args) {
-        char[][] chars = Kiligz.to2DCharArray(
+        char[][] chars = Kiligz.toMatrixCharArray(
                 "A,B,C,E",
                 "S,F,C,S",
                 "A,D,E,E");

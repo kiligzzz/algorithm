@@ -20,9 +20,9 @@ import type.DataStructure;
  * @author Ivan
  * @since 2023/4/20
  */
-public class N0036 implements DataStructure.Arrayed {
+public class N0036 implements DataStructure.Matrix {
     public static void main(String[] args) {
-        char[][] board = Kiligz.to2DCharArray(
+        char[][] board = Kiligz.toMatrixCharArray(
                 "5,3,.,.,7,.,.,.,.",
                 "6,.,.,1,9,5,.,.,.",
                 ".,9,8,.,.,.,.,6,.",

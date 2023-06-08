@@ -12,7 +12,7 @@ import type.TwoPointer;
  */
 public class Offer04 implements TwoPointer, Binary {
     public static void main(String[] args) {
-        int[][] matrix = Kiligz.to2DIntArray(
+        int[][] matrix = Kiligz.toMatrixIntArray(
                 "1,4,7,11,15",
                 "2,5,8,12,19",
                 "3,6,9,16,22",

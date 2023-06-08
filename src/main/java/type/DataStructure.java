@@ -8,9 +8,15 @@ package type;
  */
 public interface DataStructure {
     /**
-     * 数组，包含二维
+     * 数组
      */
     interface Arrayed extends DataStructure {
+    }
+
+    /**
+     * 矩阵
+     */
+    interface Matrix extends DataStructure {
     }
 
     /**

@@ -13,7 +13,7 @@ import type.DynamicProgramming;
  */
 public class N0064 implements DynamicProgramming {
     public static void main(String[] args) {
-        int[][] arr = Kiligz.to2DIntArray(
+        int[][] arr = Kiligz.toMatrixIntArray(
                 "1,3,1",
                 "1,5,1",
                 "4,2,1");

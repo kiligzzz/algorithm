@@ -67,9 +67,9 @@ public class Kiligz {
     }
 
     /**
-     * str -> 2DCharArray
+     * str -> MatrixCharArray
      */
-    public static char[][] to2DCharArray(String... strArr) {
+    public static char[][] toMatrixCharArray(String... strArr) {
         char[][] arr = new char[strArr.length][];
         for (int i = 0; i < strArr.length; i++) {
             arr[i] = toCharArray(strArr[i]);
@@ -87,9 +87,9 @@ public class Kiligz {
     }
 
     /**
-     * n个str -> 2DIntArray
+     * n个str -> MatrixIntArray
      */
-    public static int[][] to2DIntArray(String... strArr) {
+    public static int[][] toMatrixIntArray(String... strArr) {
         int[][] arr = new int[strArr.length][];
         for (int i = 0; i < strArr.length; i++) {
             arr[i] = toIntArray(strArr[i]);

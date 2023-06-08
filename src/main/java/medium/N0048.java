@@ -11,9 +11,9 @@ import type.DataStructure;
  * @author Ivan
  * @since 2023/5/6
  */
-public class N0048 implements DataStructure.Arrayed {
+public class N0048 implements DataStructure.Matrix {
     public static void main(String[] args) {
-        int[][] matrix = Kiligz.to2DIntArray(
+        int[][] matrix = Kiligz.toMatrixIntArray(
                 "1,2,3",
                 "4,5,6",
                 "7,8,9");
