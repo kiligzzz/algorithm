@@ -2,6 +2,8 @@ package medium;
 
 import support.Kiligz;
 import type.CSF;
+import type.DFS;
+import type.Recursive;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,7 +19,7 @@ import java.util.List;
  * @author Ivan
  * @since 2023/4/25
  */
-public class N0047 implements CSF.FullPermutation {
+public class N0047 implements CSF.FullPermutation, DFS.Backtrack, Recursive {
     public static void main(String[] args) {
         int[] arr = Kiligz.toIntArray("1,1,2");
         Kiligz.print(new N0047().permuteUnique(arr));
@@ -41,7 +43,7 @@ public class N0047 implements CSF.FullPermutation {
 
         for (int i = 0; i < nums.length; i++) {
             if (used[i]) continue;
-            // 保证i位置的元素一定在i-1位置相同元素之前
+            // 保证i位置的元素一定在i-1位置相同元素之前（该方法会比hash效率高些）
             if (i > 0 && nums[i] == nums[i - 1] && !used[i - 1])
                 continue;
 

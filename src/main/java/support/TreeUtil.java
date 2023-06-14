@@ -1,11 +1,14 @@
 package support;
 
+import java.util.function.Function;
+
 /**
  * 树工具类
  */
+@SuppressWarnings("all")
 public class TreeUtil {
 
-    public static void show(TreeNode root) {
+    public static void show(Tree root) {
         if (root == null) {
             System.out.println("EMPTY!");
             return;
@@ -46,28 +49,28 @@ public class TreeUtil {
     /**
      * 层序遍历结果转为树
      */
-    public static TreeNode toTree(String[] sequences, int idx) {
+    public static Tree toTree(String[] sequences, int idx, Function<Integer, Tree> function) {
         if (idx >= sequences.length
                 || "null".equals(sequences[idx]))
             return null;
 
-        TreeNode root = new TreeNode(Integer.parseInt(sequences[idx]));
+        Tree root = function.apply(Integer.parseInt(sequences[idx]));;
         // 层序遍历后父节点与左子节点的关系：2 * idx + 1
         int leftIdx = 2 * idx + 1;
         int rightIdx = leftIdx + 1;
-        root.left = toTree(sequences, leftIdx);
-        root.right = toTree(sequences, rightIdx);
+        root.left = toTree(sequences, leftIdx, function);
+        root.right = toTree(sequences, rightIdx, function);
         return root;
     }
 
     /**
      * 用于获得树的层数
      */
-    public static int getTreeDepth(TreeNode root) {
-        return root == null ? 0 : (1 + Math.max(getTreeDepth(root.left), getTreeDepth(root.right)));
+    public static int getTreeDepth(Tree root) {
+        return root == null ? 0 : (1 + Math.max(getTreeDepth((Tree) root.left), getTreeDepth((Tree) root.right)));
     }
 
-    private static void writeArray(TreeNode currNode, int rowIndex, int columnIndex, String[][] res, int treeDepth) {
+    private static void writeArray(Tree currNode, int rowIndex, int columnIndex, String[][] res, int treeDepth) {
         // 保证输入的树不为空
         if (currNode == null) return;
         // 先将当前节点保存到二维数组中
@@ -83,13 +86,13 @@ public class TreeUtil {
         // 对左儿子进行判断，若有左儿子，则记录相应的"/"与左儿子的值
         if (currNode.left != null) {
             res[rowIndex + 1][columnIndex - gap] = "/";
-            writeArray(currNode.left, rowIndex + 2, columnIndex - gap * 2, res, treeDepth);
+            writeArray((Tree) currNode.left, rowIndex + 2, columnIndex - gap * 2, res, treeDepth);
         }
 
         // 对右儿子进行判断，若有右儿子，则记录相应的"\"与右儿子的值
         if (currNode.right != null) {
             res[rowIndex + 1][columnIndex + gap] = "\\";
-            writeArray(currNode.right, rowIndex + 2, columnIndex + gap * 2, res, treeDepth);
+            writeArray((Tree) currNode.right, rowIndex + 2, columnIndex + gap * 2, res, treeDepth);
         }
     }
 }

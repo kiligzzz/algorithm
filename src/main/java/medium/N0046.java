@@ -2,6 +2,8 @@ package medium;
 
 import support.Kiligz;
 import type.CSF;
+import type.DFS;
+import type.Recursive;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -16,7 +18,7 @@ import java.util.List;
  * @author Ivan
  * @since 2023/4/25
  */
-public class N0046 implements CSF.FullPermutation {
+public class N0046 implements CSF.FullPermutation, DFS.Backtrack, Recursive {
     public static void main(String[] args) {
         int[] arr = Kiligz.toIntArray("1,2,3");
         Kiligz.print(new N0046().permute(arr));

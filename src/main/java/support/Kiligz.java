@@ -1,5 +1,6 @@
 package support;
 
+import java.lang.reflect.Array;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -7,6 +8,7 @@ import java.util.stream.Collectors;
  * @author Ivan
  * @since 2023/2/27
  */
+@SuppressWarnings("all")
 public class Kiligz {
 
     public static void print(Object obj) {
@@ -18,6 +20,10 @@ public class Kiligz {
     }
 
     public static void print(int[][] arr) {
+        System.out.println(Arrays.deepToString(arr));
+    }
+
+    public static <T> void print(T[] arr) {
         System.out.println(Arrays.deepToString(arr));
     }
 
@@ -48,11 +54,61 @@ public class Kiligz {
             System.out.println("circleAccessIdx: " + nodeList.indexOf(circleAccess));
     }
 
-    public static void print(TreeNode tree) {
+    public static void print(Tree tree) {
         TreeUtil.show(tree);
     }
 
+    public static void print(Node35 head) {
+        List<Node35> nodeList = new ArrayList<>();
+        Node35 cur = head;
+        while (cur != null) {
+            nodeList.add(cur);
+            cur = cur.next;
+        }
 
+        System.out.println(
+                nodeList.stream()
+                        .map(node -> node.val + "")
+                        .collect(Collectors.joining(" -> "))
+        );
+        System.out.println(
+                nodeList.stream()
+                        .filter(node -> node.random != null)
+                        .map(node -> node.val + " -> " + node.random.val)
+                        .collect(Collectors.joining("\n"))
+        );
+    }
+
+    public static void print(Node36 head) {
+        List<Node36> ascList = new ArrayList<>();
+        ascList.add(head);
+        Node36 cur = head.right;
+        while (cur != null) {
+            if (cur == head) break;
+            ascList.add(cur);
+            cur = cur.right;
+        }
+        List<Node36> descList = new ArrayList<>();
+        cur = head.left;
+        while (cur != null) {
+            descList.add(cur);
+            if (cur == head) break;
+            cur = cur.left;
+        }
+        System.out.println("asc: " +
+                ascList.stream()
+                        .map(node36 -> node36.val + "")
+                        .collect(Collectors.joining(" -> "))
+        );
+        System.out.println("desc: " +
+                descList.stream()
+                        .map(node36 -> node36.val + "")
+                        .collect(Collectors.joining(" -> "))
+        );
+        if (ascList.get(0) == descList.get(descList.size() - 1)) {
+            System.out.println("head: " + ascList.get(0).val);
+        }
+    }
 
     /**
      * str -> CharArray
@@ -146,6 +202,45 @@ public class Kiligz {
      *      3
      */
     public static TreeNode toTreeNode(String str) {
-        return TreeUtil.toTree(str.split(","), 0);
+        return (TreeNode) TreeUtil.toTree(str.split(","), 0, TreeNode::new);
+    }
+
+    /**
+     * str -> Node35
+     */
+    public static Node35 toNode35(String str) {
+        str = str.replace("[", "").replace("]", "");
+        String[] valAndIdxArr = str.split(",");
+
+        Node35 head = new Node35(Integer.parseInt(valAndIdxArr[0]));
+
+        Node35 cur = head;
+        List<Node35> nodeList = new ArrayList<>();
+        nodeList.add(cur);
+        List<String> randomList = new ArrayList<>();
+        for (int i = 1; i < valAndIdxArr.length; i++) {
+            if (i % 2 == 0) {
+                cur = cur.next = new Node35(Integer.parseInt(valAndIdxArr[i]));
+                nodeList.add(cur);
+            } else {
+                randomList.add(valAndIdxArr[i]);
+            }
+        }
+
+        for (int i = 0; i < nodeList.size(); i++) {
+            String randomIdx = randomList.get(i);
+            if (!"null".equals(randomIdx)) {
+                Node35 node = nodeList.get(i);
+                node.random = nodeList.get(Integer.parseInt(randomIdx));
+            }
+        }
+        return head;
+    }
+
+    /**
+     * str -> Node36(二叉树)
+     */
+    public static Node36 toNode36(String str) {
+        return (Node36) TreeUtil.toTree(str.split(","), 0, Node36::new);
     }
 }

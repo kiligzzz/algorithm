@@ -17,6 +17,7 @@ import type.Recursive;
 public class N0114 implements DataStructure.BinaryTree, Recursive, DFS {
     public static void main(String[] args) {
         TreeNode root = Kiligz.toTreeNode("1,2,5,3,4,null,6");
+        Kiligz.print(root);
         new N0114().flatten(root);
         Kiligz.print(root);
     }
