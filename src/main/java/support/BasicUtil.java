@@ -63,4 +63,39 @@ public class BasicUtil {
         }
         return slow;
     }
+
+    /**
+     * 快排
+     */
+    public static void quickSort(int[] arr) {
+        quickSort(arr, 0, arr.length - 1);
+    }
+
+    /**
+     * 快排
+     */
+    private static void quickSort(int[] arr, int left, int right) {
+        if (left >= right) return;
+
+        int l = left;
+        int r = right;
+        while (l < r) {
+            while (l < r && arr[r] >= arr[left]) r--;
+            while (l < r && arr[l] <= arr[right]) l++;
+
+            swap(arr, l, r);
+        }
+        swap(arr, l, left);
+        quickSort(arr, left, l - 1);
+        quickSort(arr, l + 1, right);
+    }
+
+    /**
+     * 交换元素位置
+     */
+    private static void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
 }

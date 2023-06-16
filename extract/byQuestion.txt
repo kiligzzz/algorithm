@@ -90,3 +90,6 @@ Offer34 (二叉树中和为某一值的路径) -> [DataStructure.BinaryTree, DFS
 Offer35 (复杂链表的复制) -> [DataStructure.Linked, Common.Hash]
 Offer36 (二叉搜索树与双向链表) -> [DataStructure.BinaryTree.BinarySearchTree, DFS, Recursive]
 Offer38 (字符串的排列) -> [CSF.FullPermutation, DFS.Backtrack, Recursive]
+Offer39 (数组中出现次数超过一半的数字) -> [Common.Hash]
+Offer40 (最小的k个数) -> [DataStructure.Arrayed, Sort.QuickSort]
+Offer42 (连续子数组的最大和) -> [DynamicProgramming.Kadane]
