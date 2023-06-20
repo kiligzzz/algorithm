@@ -15,7 +15,7 @@ public interface Common {
 
     /**
      * 数字处理
-     * 包含位运算等
+     * 包含位运算、数学方法、模拟等
      */
     interface Number extends Common {
     }

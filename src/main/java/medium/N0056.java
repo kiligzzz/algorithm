@@ -2,6 +2,7 @@ package medium;
 
 import support.Kiligz;
 import type.DataStructure;
+import type.Sort;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -14,7 +15,7 @@ import java.util.Comparator;
  * @author Ivan
  * @since 2023/5/10
  */
-public class N0056 implements DataStructure.Arrayed {
+public class N0056 implements DataStructure.Arrayed, Sort {
     public static void main(String[] args) {
         int[][] arr = Kiligz.toMatrixIntArray("1,3",
                 "2,6",
