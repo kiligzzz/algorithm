@@ -1,6 +1,7 @@
 package support;
 
-import java.lang.reflect.Array;
+import com.sun.tools.javac.util.Pair;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -165,6 +166,27 @@ public class Kiligz {
      */
     public static List<String> toList(String... strArr) {
         return Arrays.asList(strArr);
+    }
+
+    /**
+     * n个str1，n个str2，交点前skip1个节点，交点前skip2个节点 -> ListNode，有交点的ListNode
+     */
+    public static Pair<ListNode, ListNode> toIntersectListNode(String str1, String str2, int skip1, int skip2) {
+        ListNode head1 = toListNode(str1);
+        ListNode head2 = toListNode(str2);
+
+        ListNode cur1 = head1;
+        for (int i = 0; i < skip1; i++) {
+            cur1 = cur1.next;
+        }
+
+        ListNode cur2 = head2;
+        for (int i = 0; i < skip2 - 1; i++) {
+            cur2 = cur2.next;
+        }
+        cur2.next = cur1;
+
+        return Pair.of(head1, head2);
     }
 
     /**

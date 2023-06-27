@@ -1,6 +1,7 @@
 package easy;
 
 import support.Kiligz;
+import type.DataStructure;
 
 import java.util.LinkedList;
 import java.util.Stack;
@@ -11,7 +12,7 @@ import java.util.Stack;
  * @author Ivan
  * @since 2023/6/7
  */
-public class Offer30 {
+public class Offer30 implements DataStructure.Stacked {
     public static void main(String[] args) {
         MinStack obj = new MinStack();
         obj.push(1);
