@@ -2,6 +2,7 @@ package support;
 
 import com.sun.tools.javac.util.Pair;
 
+import java.lang.reflect.Array;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -13,19 +14,7 @@ import java.util.stream.Collectors;
 public class Kiligz {
 
     public static void print(Object obj) {
-        System.out.println(obj);
-    }
-
-    public static void print(int[] arr) {
-        System.out.println(Arrays.toString(arr));
-    }
-
-    public static void print(int[][] arr) {
-        System.out.println(Arrays.deepToString(arr));
-    }
-
-    public static <T> void print(T[] arr) {
-        System.out.println(Arrays.deepToString(arr));
+        System.out.println(arrayToString(obj));
     }
 
     public static void print(ListNode head) {
@@ -110,6 +99,24 @@ public class Kiligz {
             System.out.println("head: " + ascList.get(0).val);
         }
     }
+
+    /**
+     * 将各种数组类型转为String，包含多维
+     */
+    private static String arrayToString(Object obj) {
+        if (obj.getClass().isArray()) {
+            StringJoiner res = new StringJoiner(", ", "[", "]");
+            int length = Array.getLength(obj);
+            for (int i = 0; i < length; i++) {
+                res.add(arrayToString(Array.get(obj, i)));
+            }
+            return res.toString();
+        } else {
+            return obj.toString();
+        }
+    }
+
+
 
     /**
      * str -> CharArray
