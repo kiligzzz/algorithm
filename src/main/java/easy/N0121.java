@@ -1,7 +1,7 @@
 package easy;
 
 import support.Kiligz;
-import type.TwoPointer;
+import type.DynamicProgramming;
 
 /**
  * 买卖股票的最佳时机
@@ -12,7 +12,7 @@ import type.TwoPointer;
  * @author Ivan
  * @since 2023/5/24
  */
-public class N0121 implements TwoPointer {
+public class N0121 implements DynamicProgramming {
     public static void main(String[] args) {
         int[] arr = Kiligz.toIntArray("7,1,5,3,6,4");
         Kiligz.print(new N0121().maxProfit(arr));
