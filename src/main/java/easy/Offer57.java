@@ -1,12 +1,13 @@
 package easy;
 
 import support.Kiligz;
+import type.TwoPointer;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 和为s的两个数字 & II
+ * 和为s的两个数字I & II
  *
  * 输入：nums = [2,7,11,15], target = 9
  * 输出：[2,7] 或者 [7,2]
@@ -19,7 +20,7 @@ import java.util.List;
  * @author Ivan
  * @since 2023/6/29
  */
-public class Offer57 {
+public class Offer57 implements TwoPointer.SlideWindow {
     public static void main(String[] args) {
 //        int[] nums = Kiligz.toIntArray("2,7,11,15");
 //        Kiligz.print(new Offer57().twoSum(nums, 9));
@@ -43,7 +44,7 @@ public class Offer57 {
     }
 
     public int[][] findContinuousSequence(int target) {
-        List<int[]> res = new ArrayList<int[]>();
+        List<int[]> res = new ArrayList<>();
         for (int l = 1, r = 2; l < r;) {
             // S = (首项 + 末项) * 项数 / 2
             int sum = (l + r) * (r - l + 1) / 2;

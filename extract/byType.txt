@@ -7,9 +7,9 @@ CSF.Combination -> [N0039,N0040,N0077,N0216]
 CSF.FullPermutation -> [N0046,N0047,Offer38]
 CSF.Subset -> [N0078,N0090]
 
-Common -> [N0001,N0007,N0008,N0009,N0014,N0022,N0028,N0049,N0128,N0136,N0137,N2357,Offer05,Offer15,Offer17,Offer35,Offer39,Offer44,Offer45,Offer46,Offer49,Offer50,Offer52,Offer56,Offer58,Offer61]
+Common -> [N0001,N0007,N0008,N0009,N0014,N0022,N0028,N0049,N0128,N0136,N0137,N2357,Offer05,Offer15,Offer17,Offer35,Offer39,Offer44,Offer45,Offer46,Offer49,Offer50,Offer52,Offer56,Offer58,Offer61,Offer64,Offer65]
 Common.Hash -> [N0001,N2357,Offer35,Offer39,Offer50,Offer52,Offer61]
-Common.Number -> [N0007,N0009,N0128,N0136,N0137,Offer15,Offer17,Offer44,Offer46,Offer49,Offer56]
+Common.Number -> [N0007,N0009,N0128,N0136,N0137,Offer15,Offer17,Offer44,Offer46,Offer49,Offer56,Offer64,Offer65]
 Common.Str -> [N0008,N0014,N0022,N0049,Offer05,Offer45,Offer58]
 Common.Violent -> [N0028]
 
@@ -27,7 +27,7 @@ DataStructure.Stacked -> [N0020,Offer30,Offer31]
 
 DivideAndConquer -> [N0105,N0106,Offer07]
 
-DynamicProgramming -> [N0005,N0038,N0053,N0062,N0064,N0070,N0096,N0121,N0139,Offer10,Offer42,Offer46,Offer47,Offer49,Offer60,Offer62,Offer63]
+DynamicProgramming -> [N0005,N0038,N0053,N0062,N0064,N0070,N0096,N0121,N0139,Offer10,Offer42,Offer46,Offer47,Offer49,Offer60,Offer62,Offer63,Offer66]
 DynamicProgramming.Greed -> [N0055,N0122,Offer14,Offer45]
 DynamicProgramming.Kadane -> [N0053,Offer42]
 
@@ -38,8 +38,8 @@ Recursive -> [N0017,N0021,N0038,N0039,N0040,N0046,N0047,N0077,N0078,N0090,N0094,
 Sort -> [N0056,Offer40,Offer45]
 Sort.QuickSort -> [Offer40]
 
-TwoPointer -> [N0003,N0005,N0011,N0015,N0019,N0026,N0033,N0034,N0038,N0070,N0075,N0092,N0125,N0139,N0141,N0142,Offer04,Offer21,Offer22,Offer24,Offer31,Offer48,Offer49,Offer52,Offer53]
+TwoPointer -> [N0003,N0005,N0011,N0015,N0019,N0026,N0033,N0034,N0038,N0070,N0075,N0092,N0125,N0139,N0141,N0142,Offer04,Offer21,Offer22,Offer24,Offer31,Offer48,Offer49,Offer52,Offer53,Offer57]
 TwoPointer.CenterDiffuse -> [N0005]
 TwoPointer.FastSlowPointer -> [N0019,N0026,N0038,N0075,N0139,N0141,N0142,Offer22]
 TwoPointer.KMP -> [N0028]
-TwoPointer.SlideWindow -> [N0003,N0070,Offer48]
+TwoPointer.SlideWindow -> [N0003,N0070,Offer48,Offer57]
