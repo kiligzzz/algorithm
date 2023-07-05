@@ -4,26 +4,26 @@ import support.Kiligz;
 import type.Common;
 
 /**
- * 字符串转换整数
- * 输入：s = " -42" 输出：-42
+ * 把字符串转换成整数
+ * 输入: " -42"
+ * 输出: -42
  *
  * @author Ivan
- * @since 2023/2/28
+ * @since 2023/7/5
  */
-public class N0008 implements Common.Str {
-
+public class Offer67 implements Common.Str {
     public static void main(String[] args) {
-        Kiligz.print(new N0008().myAtoi(" -42"));
+        Kiligz.print(new Offer67().strToInt(" -42"));
     }
 
-    public int myAtoi(String s) {
-        s = s.trim();
-        if (s.isEmpty()) return 0;
+    public int strToInt(String str) {
+        str = str.trim();
+        if (str.isEmpty()) return 0;
 
         int cur = 0;
         boolean isStart = false;
         boolean positive = true;
-        for (char c : s.toCharArray()) {
+        for (char c : str.toCharArray()) {
             if (c < '0' || c > '9') {
                 if (isStart || (c != '+' && c != '-')) break;
                 if (c == '-') positive = false;
