@@ -7,9 +7,9 @@ CSF.Combination -> [N0039,N0040,N0077,N0216]
 CSF.FullPermutation -> [N0046,N0047,Offer38]
 CSF.Subset -> [N0078,N0090]
 
-Common -> [N0001,N0007,N0008,N0009,N0014,N0022,N0028,N0049,N0128,N0136,N0137,N2357,Offer05,Offer15,Offer17,Offer35,Offer39,Offer44,Offer45,Offer46,Offer49,Offer50,Offer52,Offer56,Offer58,Offer61,Offer64,Offer65,Offer67]
+Common -> [N0001,N0007,N0008,N0009,N0014,N0022,N0028,N0049,N0128,N0136,N0137,N2357,Offer05,Offer15,Offer17,Offer35,Offer39,Offer44,Offer45,Offer46,Offer49,Offer50,Offer52,Offer56,Offer58,Offer61,Offer64,Offer65,Offer67,OfferII001,OfferII002,OfferII003]
 Common.Hash -> [N0001,N2357,Offer35,Offer39,Offer50,Offer52,Offer61]
-Common.Number -> [N0007,N0009,N0128,N0136,N0137,Offer15,Offer17,Offer44,Offer46,Offer49,Offer56,Offer64,Offer65]
+Common.Number -> [N0007,N0009,N0128,N0136,N0137,Offer15,Offer17,Offer44,Offer46,Offer49,Offer56,Offer64,Offer65,OfferII001,OfferII002,OfferII003]
 Common.Str -> [N0008,N0014,N0022,N0049,Offer05,Offer45,Offer58,Offer67]
 Common.Violent -> [N0028]
 

@@ -72,6 +72,24 @@ public class BasicUtil {
     }
 
     /**
+     * 快速幂
+     */
+    public double quickPow(double x, int n) {
+        return n >= 0 ?
+                pow(x, n) : 1 / pow(x, -n);
+    }
+
+    /**
+     * 快速幂
+     */
+    private double pow(double x, int n) {
+        if (n == 0) return 1;
+
+        double v = pow(x, n / 2);
+        return n % 2 == 0 ? v * v : v * v * x;
+    }
+
+    /**
      * 快排
      */
     private static void quickSort(int[] arr, int left, int right) {
