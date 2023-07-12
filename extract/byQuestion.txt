@@ -120,3 +120,8 @@ Offer68 (二叉搜索树的最近公共祖先 & 二叉树的最近公共祖先) 
 OfferII001 (整数除法) -> [Common.Number]
 OfferII002 (二进制加法) -> [Common.Number]
 OfferII003 (前n个数字二进制中1的个数) -> [Common.Number]
+OfferII004 (只出现一次的数字) -> [Common.Number]
+OfferII005 (单词长度的最大乘积) -> [Common.Number]
+OfferII006 (排序数组中两个数字之和) -> [TwoPointer]
+OfferII007 (数组中和为0的三个数) -> [TwoPointer]
+OfferII008 (和大于等于target的最短子数组) -> [TwoPointer.SlideWindow]

@@ -36,7 +36,7 @@ public class Offer56 implements Common.Number {
         for (int num : nums)
             xor ^= num;
 
-        // 找到A、B中为1的最低位（此时A & div != B & div，用于将A、B分到不同的组）
+        // 找到xor中为1（相异）的最低位（此时A & div != B & div，用于将A、B分到不同的组）
         int div = 1;
         while ((div & xor) == 0)
             div <<= 1;
