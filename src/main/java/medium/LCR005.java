@@ -15,10 +15,10 @@ import java.util.Map;
  * @author Ivan
  * @since 2023/7/10
  */
-public class OfferII005 implements Common.Number {
+public class LCR005 implements Common.Number {
     public static void main(String[] args) {
         String[] words = Kiligz.toArray("abcw", "baz", "foo", "bar", "fxyz", "abcdef");
-        Kiligz.print(new OfferII005().maxProduct(words));
+        Kiligz.print(new LCR005().maxProduct(words));
     }
 
     /**

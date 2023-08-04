@@ -15,10 +15,10 @@ import java.util.List;
  * @author Ivan
  * @since 2023/7/10
  */
-public class OfferII007 implements TwoPointer {
+public class LCR007 implements TwoPointer {
     public static void main(String[] args) {
         int[] nums = Kiligz.toIntArray("-1,0,1,2,-1,-4");
-        Kiligz.print(new OfferII007().threeSum(nums));
+        Kiligz.print(new LCR007().threeSum(nums));
     }
 
     public List<List<Integer>> threeSum(int[] nums) {

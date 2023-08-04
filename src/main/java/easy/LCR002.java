@@ -11,9 +11,9 @@ import type.Common;
  * @author Ivan
  * @since 2023/7/6
  */
-public class OfferII002 implements Common.Number {
+public class LCR002 implements Common.Number {
     public static void main(String[] args) {
-        Kiligz.print(new OfferII002().addBinary("1", "111"));
+        Kiligz.print(new LCR002().addBinary("1", "111"));
     }
 
     public String addBinary(String a, String b) {

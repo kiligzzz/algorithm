@@ -13,10 +13,10 @@ import java.util.Map;
  * @author Ivan
  * @since 2023/7/24
  */
-public class OfferII011 implements PrefixSum {
+public class LCR011 implements PrefixSum {
     public static void main(String[] args) {
         int[] nums = Kiligz.toIntArray("0,1,0");
-        Kiligz.print(new OfferII011().findMaxLength(nums));
+        Kiligz.print(new LCR011().findMaxLength(nums));
     }
 
     /**

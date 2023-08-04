@@ -11,10 +11,10 @@ import type.Common;
  * @author Ivan
  * @since 2023/7/7
  */
-public class OfferII004 implements Common.Number {
+public class LCR004 implements Common.Number {
     public static void main(String[] args) {
         int[] nums = Kiligz.toIntArray("2,2,3,2");
-        Kiligz.print(new OfferII004().singleNumber(nums));
+        Kiligz.print(new LCR004().singleNumber(nums));
     }
 
     public int singleNumber(int[] nums) {

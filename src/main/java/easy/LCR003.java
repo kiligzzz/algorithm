@@ -11,9 +11,9 @@ import type.Common;
  * @author Ivan
  * @since 2023/7/6
  */
-public class OfferII003 implements Common.Number {
+public class LCR003 implements Common.Number {
     public static void main(String[] args) {
-        Kiligz.print(new OfferII003().countBits(2));
+        Kiligz.print(new LCR003().countBits(2));
     }
 
     public int[] countBits(int n) {

@@ -12,9 +12,9 @@ import type.Common;
  * @author Ivan
  * @since 2023/7/6
  */
-public class OfferII001 implements Common.Number {
+public class LCR001 implements Common.Number {
     public static void main(String[] args) {
-        Kiligz.print(new OfferII001().divide(15, 2));
+        Kiligz.print(new LCR001().divide(15, 2));
     }
 
     /**

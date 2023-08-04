@@ -12,10 +12,10 @@ import type.TwoPointer;
  * @author Ivan
  * @since 2023/7/13
  */
-public class OfferII009 implements TwoPointer.SlideWindow, PrefixSum {
+public class LCR009 implements TwoPointer.SlideWindow, PrefixSum {
     public static void main(String[] args) {
         int[] nums = Kiligz.toIntArray("10,5,2,6");
-        Kiligz.print(new OfferII009().numSubarrayProductLessThanK(nums, 100));
+        Kiligz.print(new LCR009().numSubarrayProductLessThanK(nums, 100));
     }
 
     /**

@@ -13,9 +13,9 @@ import java.util.Arrays;
  * @author Ivan
  * @since 2023/8/2
  */
-public class OfferII014 implements TwoPointer.SlideWindow {
+public class LCR014 implements TwoPointer.SlideWindow {
     public static void main(String[] args) {
-        Kiligz.print(new OfferII014().checkInclusion("ab", "eidbaooo"));
+        Kiligz.print(new LCR014().checkInclusion("ab", "eidbaooo"));
     }
 
     public boolean checkInclusion(String s1, String s2) {

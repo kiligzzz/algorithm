@@ -11,10 +11,10 @@ import type.PrefixSum;
  * @author Ivan
  * @since 2023/8/1
  */
-public class OfferII012 implements PrefixSum {
+public class LCR012 implements PrefixSum {
     public static void main(String[] args) {
         int[] nums = Kiligz.toIntArray("1,7,3,6,5,6");
-        Kiligz.print(new OfferII012().pivotIndex(nums));
+        Kiligz.print(new LCR012().pivotIndex(nums));
     }
 
     public int pivotIndex(int[] nums) {

@@ -12,7 +12,7 @@ import type.PrefixSum;
  * @author Ivan
  * @since 2023/8/1
  */
-public class OfferII013 implements DataStructure.Matrix, PrefixSum {
+public class LCR013 implements DataStructure.Matrix, PrefixSum {
     public static void main(String[] args) {
         int[][] matrix = Kiligz.toMatrixIntArray(
                 "3,0,1,4,2",

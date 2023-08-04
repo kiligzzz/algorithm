@@ -15,10 +15,10 @@ import java.util.Map;
  * @author Ivan
  * @since 2023/7/21
  */
-public class OfferII010 implements Common.Hash, PrefixSum {
+public class LCR010 implements Common.Hash, PrefixSum {
     public static void main(String[] args) {
         int[] nums = Kiligz.toIntArray("1,2,3,4,5,4,3,2,1");
-        Kiligz.print(new OfferII010().subarraySum(nums, 9));
+        Kiligz.print(new LCR010().subarraySum(nums, 9));
     }
 
     /**
