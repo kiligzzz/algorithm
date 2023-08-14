@@ -40,8 +40,27 @@ public class Kiligz {
                         .collect(Collectors.joining(" -> "))
         );
 
-        if (hasCircle)
-            System.out.println("circleAccessIdx: " + nodeList.indexOf(circleAccess));
+        // 打印环
+        if (hasCircle) {
+            int accessIdx = nodeList.indexOf(circleAccess);
+            List<ListNode> preList = nodeList.subList(0, accessIdx);
+            List<ListNode> sufList = nodeList.subList(accessIdx, nodeList.size() - 1);
+            String prefix = preList.stream()
+                    .map(node -> " ")
+                    .collect(Collectors.joining("    "));
+            String suffixSecond = sufList.stream()
+                    .map(node -> " ")
+                    .collect(Collectors.joining("    "));
+            String suffixThird = sufList.stream()
+                    .map(node -> " 一")
+                    .collect(Collectors.joining("  "));
+            prefix += prefix.isEmpty() ? "" : "    ";
+            suffixSecond = "↑   " + suffixSecond + "|";
+            suffixThird += suffixThird.isEmpty() ? "" : "  一";
+
+            System.out.println(prefix + suffixSecond);
+            System.out.println(prefix + suffixThird);
+        }
     }
 
     public static void print(Tree tree) {
@@ -115,7 +134,6 @@ public class Kiligz {
             return obj.toString();
         }
     }
-
 
 
     /**
@@ -224,11 +242,11 @@ public class Kiligz {
     /**
      * n个value -> TreeNode
      * 如"1,null,2,3"
-     *      1
-     *       \
-     *        2
-     *       /
-     *      3
+     * 1
+     * \
+     * 2
+     * /
+     * 3
      */
     public static TreeNode toTreeNode(String str) {
         return (TreeNode) TreeUtil.toTree(str.split(","), 0, TreeNode::new);

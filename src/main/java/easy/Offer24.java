@@ -20,14 +20,14 @@ public class Offer24 implements DataStructure.Linked, TwoPointer {
     }
 
     public ListNode reverseList(ListNode head) {
-        ListNode pre = head;
-        ListNode cur = null;
-        while (pre != null) {
-            ListNode temp = pre.next;
-            pre.next = cur;
-            cur = pre;
-            pre = temp;
+        ListNode pre = null;
+        ListNode cur = head;
+        while (cur != null) {
+            ListNode temp = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = temp;
         }
-        return cur;
+        return pre;
     }
 }

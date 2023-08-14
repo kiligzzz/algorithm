@@ -47,14 +47,14 @@ public class N0092 implements DataStructure.Linked, TwoPointer {
     }
 
     public ListNode reverse(ListNode head) {
-        ListNode remain = head;
-        ListNode reversed = null;
-        while (remain != null) {
-            ListNode temp = remain.next;
-            remain.next = reversed;
-            reversed = remain;
-            remain = temp;
+        ListNode pre = null;
+        ListNode cur = head;
+        while (cur != null) {
+            ListNode temp = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = temp;
         }
-        return reversed;
+        return pre;
     }
 }
