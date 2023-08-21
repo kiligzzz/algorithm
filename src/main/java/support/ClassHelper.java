@@ -28,7 +28,7 @@ public class ClassHelper {
     private static final String CLASS_SUFFIX = ".class";
     private static final String JAR_ROOT_START = "/BOOT-INF/classes/";
     private static final String FILE_ROOT_START = "/classes/";
-    
+
     /**
      * 类加载器 -> 该类实例
      */
@@ -166,15 +166,30 @@ public class ClassHelper {
     }
 
     /**
+     * 获取指定包的所有内部类
+     */
+    public List<Class<?>> getInnerClasses(String... packageNames) {
+        List<Class<?>> innerClassList = new ArrayList<>();
+
+        List<Class<?>> classList = loadClasses(packageNames);
+        for (Class<?> clazz : classList) {
+            innerClassList.addAll(getInnerClasses(clazz));
+        }
+        return innerClassList.stream().distinct().collect(Collectors.toList());
+    }
+
+    /**
      * 获取一个类的所有内部类
      */
     public List<Class<?>> getInnerClasses(Class<?> clazz) {
         List<Class<?>> classList = new ArrayList<>();
         Collections.addAll(classList, clazz.getDeclaredClasses());
 
-        for (Class<?> innerClass : classList) {
-            classList.addAll(getInnerClasses(innerClass));
-        }
+        List<Class<?>> innerClassList = classList.stream()
+                .map(this::getInnerClasses)
+                .flatMap(Collection::stream)
+                .collect(Collectors.toList());
+        classList.addAll(innerClassList);
         return classList;
     }
 

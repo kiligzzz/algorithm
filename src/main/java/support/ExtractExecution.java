@@ -19,8 +19,18 @@ public class ExtractExecution {
     private static final ClassHelper CLASS_HELPER = ClassHelper.getInstance();
 
     public static void main(String[] args) throws Exception {
+        extractByInnerClass();
         extractByQuestion();
         extractByType();
+    }
+
+    private static void extractByInnerClass() throws Exception {
+        List<Class<?>> innerClassList = CLASS_HELPER.getInnerClasses("easy", "medium");
+        List<String> byInnerClass = innerClassList.stream()
+                .map(Class::getName)
+                .sorted(Comparator.naturalOrder())
+                .collect(Collectors.toList());
+        Files.write(Paths.get("extract/byInnerClass.txt"), byInnerClass);
     }
 
     /**

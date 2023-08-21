@@ -2,6 +2,8 @@ package medium;
 
 import support.Kiligz;
 import support.ListNode;
+import type.DataStructure;
+import type.TwoPointer;
 
 /**
  * 循环有序列表的插入
@@ -11,7 +13,7 @@ import support.ListNode;
  * @author Ivan
  * @since 2023/8/14
  */
-public class LCR029 {
+public class LCR029 implements DataStructure.Linked, TwoPointer {
     public static void main(String[] args) {
         ListNode head = Kiligz.toListNode("3,4,1", 0);
         Kiligz.print(new LCR029().insert(head, 2));
