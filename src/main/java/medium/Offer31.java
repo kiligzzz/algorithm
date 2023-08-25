@@ -4,7 +4,8 @@ import support.Kiligz;
 import type.DataStructure;
 import type.TwoPointer;
 
-import java.util.Stack;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 /**
  * 栈的压入、弹出序列
@@ -23,7 +24,7 @@ public class Offer31 implements DataStructure.Stacked, TwoPointer {
 
     public boolean validateStackSequences(int[] pushed, int[] popped) {
         int idx = 0;
-        Stack<Integer> stack = new Stack<>();
+        Deque<Integer> stack = new ArrayDeque<>();
         for (int num : pushed) {
             stack.push(num);
             while (!stack.isEmpty() && stack.peek() == popped[idx]) {

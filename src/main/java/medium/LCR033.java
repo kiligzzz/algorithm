@@ -1,6 +1,7 @@
 package medium;
 
 import support.Kiligz;
+import type.Common;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -15,7 +16,7 @@ import java.util.stream.Collectors;
  * @author Ivan
  * @since 2023/8/17
  */
-public class LCR033 {
+public class LCR033 implements Common.Str {
     public static void main(String[] args) {
         String[] strs = Kiligz.toArray("eat", "tea", "tan", "ate", "nat", "bat");
         Kiligz.print(new LCR033().groupAnagrams(strs));

@@ -3,8 +3,8 @@ package easy;
 import support.Kiligz;
 import type.DataStructure;
 
-import java.util.LinkedList;
-import java.util.Stack;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 /**
  * 包含min函数的栈
@@ -23,11 +23,11 @@ public class Offer30 implements DataStructure.Stacked {
     }
 
     static class MinStack {
-        Stack<Integer> stack, minStack;
+        Deque<Integer> stack, minStack;
 
         public MinStack() {
-            stack = new Stack<>();
-            minStack = new Stack<>();
+            stack = new ArrayDeque<>();
+            minStack = new ArrayDeque<>();
             minStack.push(Integer.MAX_VALUE);
         }
 

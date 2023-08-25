@@ -2,7 +2,8 @@ package easy;
 
 import type.DataStructure;
 
-import java.util.Stack;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 /**
  * 用两个栈实现队列
@@ -21,12 +22,12 @@ public class Offer09 implements DataStructure.Queued {
     }
 
     static class CQueue {
-        Stack<Integer> in;
-        Stack<Integer> out;
+        Deque<Integer> in;
+        Deque<Integer> out;
 
         public CQueue() {
-            in = new Stack<>();
-            out = new Stack<>();
+            in = new ArrayDeque<>();
+            out = new ArrayDeque<>();
         }
 
         public void appendTail(int value) {

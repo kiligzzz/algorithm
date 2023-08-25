@@ -1,7 +1,7 @@
+easy.LCR041$MovingAverage
 easy.Offer09$CQueue
 easy.Offer30$MinStack
 medium.LCR013$NumMatrix
 medium.LCR030$RandomizedSet
 medium.LCR031$LRUCache
-medium.LCR031$LRUCache$CacheNode
 medium.Offer59$MaxQueue

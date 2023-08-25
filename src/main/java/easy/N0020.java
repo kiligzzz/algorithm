@@ -3,7 +3,8 @@ package easy;
 import support.Kiligz;
 import type.DataStructure;
 
-import java.util.Stack;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 /**
  * 有效的括号
@@ -19,7 +20,7 @@ public class N0020 implements DataStructure.Stacked {
     }
 
     public boolean isValid(String s) {
-        Stack<Character> stack = new Stack<>();
+        Deque<Character> stack = new ArrayDeque<>();
         for (char c : s.toCharArray()) {
             if (c == '(') {
                 stack.add(')');
