@@ -28,7 +28,7 @@ public class N0015 implements TwoPointer {
         Arrays.sort(nums);
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] > 0) break;
-            // 去重
+            // 去重，否则就有多个从i开始的了
             if (i >= 1 && nums[i] == nums[i - 1]) continue;
 
             int left = i + 1;
@@ -39,7 +39,7 @@ public class N0015 implements TwoPointer {
 
                 if (sum == 0) {
                     res.add(Arrays.asList(nums[i], nums[left], nums[right]));
-                    // 去重
+                    // 去重，否则就有多个相同left/right的了
                     while (left < right && nums[left] == nums[left + 1]) left++;
                     while (left < right && nums[right] == nums[right - 1]) right--;
                     left++;

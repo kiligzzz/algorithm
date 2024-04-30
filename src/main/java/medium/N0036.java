@@ -48,8 +48,8 @@ public class N0036 implements DataStructure.Matrix {
 
                 // 该数分别在行、列、9宫格中的索引位置
                 int idx = num - '0' - 1;
-                // r / 3 * 3：一列可以放三个数独，每行有三个数独
-                // c / 3：一行可以放三个数独
+                // r / 3 * 3：一列可以放三个数独，每行有三个数独，计算出在第几行的开始（数独作为行）
+                // c / 3：一行可以放三个数独，计算出在第几列
                 int sudokuIdx = r / 3 * 3 + c / 3;
                 if (rows[r][idx] == 1 || cols[c][idx] == 1 || sudoku[sudokuIdx][idx] == 1) {
                     return false;

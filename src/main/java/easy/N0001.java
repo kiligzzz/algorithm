@@ -10,6 +10,10 @@ import java.util.Map;
  * 两数之和
  * 输入：nums = [2,7,11,15], target = 9 输出：[0,1]
  *
+ * map
+ * 9 - 2 (7) -> 0
+ *
+ *
  * @author Ivan
  * @since 2023/2/27
  */

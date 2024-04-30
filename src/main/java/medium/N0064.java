@@ -1,6 +1,7 @@
 package medium;
 
 import support.Kiligz;
+import type.DataStructure;
 import type.DynamicProgramming;
 
 /**
@@ -11,7 +12,7 @@ import type.DynamicProgramming;
  * @author Ivan
  * @since 2023/5/12
  */
-public class N0064 implements DynamicProgramming {
+public class N0064 implements DynamicProgramming, DataStructure.Matrix {
     public static void main(String[] args) {
         int[][] arr = Kiligz.toMatrixIntArray(
                 "1,3,1",

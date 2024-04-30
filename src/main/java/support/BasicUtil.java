@@ -116,4 +116,51 @@ public class BasicUtil {
         arr[i] = arr[j];
         arr[j] = temp;
     }
+
+
+    /**
+     * k个一组链表反转
+     */
+    public static ListNode reverseK(ListNode head, int k) {
+        if (head == null || k == 1) {
+            return head;
+        }
+
+        // 创建一个虚拟头节点，方便后续操作
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        ListNode prev = dummy;
+
+        // 计算链表的长度
+        int count = 0;
+        ListNode curr = head;
+        while (curr != null) {
+            count++;
+            curr = curr.next;
+        }
+
+        // 进行k个一组的反转
+        while (count >= k) {
+            curr = head;
+            ListNode next = null;
+
+            // 反转k个节点
+            for (int i = 1; i <= k; i++) {
+                next = curr.next;
+                curr.next = prev;
+                prev = curr;
+                curr = next;
+            }
+
+            // 将反转后的部分连接到链表的其余部分
+            head.next = curr;
+            prev.next = null;
+            head = prev;
+
+            // 更新计数器
+            count -= k;
+        }
+
+        return dummy.next;
+    }
 }

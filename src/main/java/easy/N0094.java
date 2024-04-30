@@ -19,7 +19,7 @@ import java.util.List;
  */
 public class N0094 implements DataStructure.BinaryTree, Recursive, DFS {
     public static void main(String[] args) {
-        TreeNode root = Kiligz.toTreeNode("1,null,2,3");
+        TreeNode root = Kiligz.toTreeNode("1,null,2,null,null,3");
         Kiligz.print(new N0094().inorderTraversal(root));
     }
 
@@ -32,10 +32,8 @@ public class N0094 implements DataStructure.BinaryTree, Recursive, DFS {
 
     private void midTraversal(TreeNode root) {
         if (root == null) return;
-        if (root.left != null)
-            midTraversal(root.left);
+        midTraversal(root.left);
         res.add(root.val);
-        if (root.right != null)
-            midTraversal(root.right);
+        midTraversal(root.right);
     }
 }

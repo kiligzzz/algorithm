@@ -23,7 +23,7 @@ public class Offer04 implements TwoPointer, Binary {
     }
 
     /**
-     * 就是一个斜向的二叉查找树
+     * 就是一个斜向的二叉查找树，15是根节点
      */
     public boolean findNumberIn2DArray(int[][] matrix, int target) {
         if (matrix.length == 0) return false;

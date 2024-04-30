@@ -27,7 +27,7 @@ public class LCR008 implements TwoPointer.SlideWindow, PrefixSum {
         int sum = 0;
         while (r < nums.length) {
             sum += nums[r];
-            while (sum >= target) {
+            while (l <= r && sum >= target) {
                 res = Math.min(res, r - l + 1);
                 sum -= nums[l];
                 l++;
